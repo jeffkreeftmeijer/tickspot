@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jeff Kreeftmeijer"]
   s.date = %q{2010-02-09}
-  s.description = %q{TODO: longer description of your gem}
+  s.description = %q{The Tickspot Ruby API wrapper.}
   s.email = %q{jeff@kreeftmeijer.nl}
   s.extra_rdoc_files = [
     "LICENSE",
@@ -25,13 +25,14 @@ Gem::Specification.new do |s|
      "VERSION",
      "lib/tickspot.rb",
      "spec/spec_helper.rb",
-     "spec/tickspot_spec.rb"
+     "spec/tickspot_spec.rb",
+     "tickspot.gemspec"
   ]
   s.homepage = %q{http://github.com/jeffkreeftmeijer/tickspot}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.5}
-  s.summary = %q{TODO: one-line summary of your gem}
+  s.summary = %q{The Tickspot Ruby API wrapper.}
   s.test_files = [
     "spec/spec_helper.rb",
      "spec/tickspot_spec.rb"
