@@ -8,62 +8,83 @@ module Tickspot
 
   class Request
     def self.post(options)
-      HTTParty.post(
-        "https://#{Tickspot.company}.tickspot.com/" <<
-          "api/#{options.delete(:section)}",
+      section = options.delete(:section)
+      result = HTTParty.post(
+        "https://#{Tickspot.company}.tickspot.com/api/#{section}",
         :query => options.merge({
           :email =>     Tickspot.email,
           :password =>  Tickspot.password
         })
       )
+      result[section.to_s]
     end
   end
-  
+
   class Base
-    def self.all
-      Request.post(:section => section)
+    attr_reader :attributes
+
+    def initialize(data)
+      @attributes = data
     end
-  end
-  
-  class Client < Base
+
+    def method_missing(method_id, *args)
+      value = @attributes[method_id.to_s]
+      if value.is_a? Array
+        return value.map do |item|
+          self.class.sections.index(method_id).new(item)
+        end
+      end
+      value
+    end
+
+    def id
+      @attributes['id']
+    end
+
     def self.section
-      :clients
+      sections[self]
+    end
+
+    def self.all(options = {})
+      result = Request.post(
+        options.merge({
+          :section => section
+        })
+      )
+      result.map{|item| new(item)} if result
+    end
+
+    def self.sections
+      {
+        Tickspot::Client =>             :clients,
+        Tickspot::Project =>            :projects,
+        Tickspot::Task =>               :tasks,
+        Tickspot::ClientProjectTask =>  :clients_projects_tasks,
+        Tickspot::Entry =>              :entries,
+        Tickspot::RecentTask =>         :recent_tasks,
+        Tickspot::User =>               :users,
+        Tickspot::CreateEntry =>        :create_entry,
+        Tickspot::UpdateEntry =>        :update_entry
+      }
     end
   end
+
+  class Client < Base; end
+
+  class Project < Base; end
+
+  class Task < Base; end
+
+  class ClientProjectTask < Base; end
   
-  class Project < Base
-    def self.section
-      :projects
-    end
-  end
+  class Entry < Base; end
+
+  class RecentTask < Base; end
+
+  class User < Base; end
+
+  class CreateEntry < Base; end
+
+  class UpdateEntry < Base; end
   
-  class Task < Base
-    def self.section
-      :tasks
-    end
-  end
-  
-  class ClientProjectTask < Base
-    def self.section
-      :clients_projects_tasks
-    end
-  end
-  
-  class Entry < Base
-    def self.section
-      :entries
-    end
-  end
-  
-  class RecentTask < Base
-    def self.section
-      :recent_tasks
-    end
-  end
-  
-  class User < Base
-    def self.section
-      :users
-    end
-  end
 end

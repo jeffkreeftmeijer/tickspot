@@ -1,0 +1,484 @@
+--- 
+:saikuro: 
+  :methods: 
+  - :lines: 7
+    :complexity: 3
+    :name: Tickspot::Base#self.all
+  - :lines: 2
+    :complexity: 1
+    :name: Tickspot::Project#self.section
+  - :lines: 2
+    :complexity: 1
+    :name: Tickspot::Entry#self.section
+  - :lines: 2
+    :complexity: 1
+    :name: Tickspot::ClientProjectTask#self.section
+  - :lines: 2
+    :complexity: 1
+    :name: Tickspot::Task#self.section
+  - :lines: 2
+    :complexity: 1
+    :name: Tickspot::RecentTask#self.section
+  - :lines: 2
+    :complexity: 1
+    :name: Tickspot::Client#self.section
+  - :lines: 2
+    :complexity: 1
+    :name: Tickspot::User#self.section
+  - :lines: 2
+    :complexity: 1
+    :name: Tickspot::Base#id
+  - :lines: 2
+    :complexity: 1
+    :name: Tickspot::Base#method_missing
+  - :lines: 2
+    :complexity: 1
+    :name: Tickspot::Base#initialize
+  - :lines: 10
+    :complexity: 1
+    :name: Tickspot::Request#self.post
+  :classes: 
+  - :lines: 23
+    :defs: 
+    - :lines: 2
+      :complexity: 1
+      :name: Tickspot::Base#initialize
+    - :lines: 2
+      :complexity: 1
+      :name: Tickspot::Base#method_missing
+    - :lines: 2
+      :complexity: 1
+      :name: Tickspot::Base#id
+    - :lines: 7
+      :complexity: 3
+      :name: Tickspot::Base#self.all
+    :complexity: 6
+    :name: Tickspot::Base
+  - :lines: 4
+    :defs: 
+    - :lines: 2
+      :complexity: 1
+      :name: Tickspot::ClientProjectTask#self.section
+    :complexity: 1
+    :name: Tickspot::ClientProjectTask
+  - :lines: 4
+    :defs: 
+    - :lines: 2
+      :complexity: 1
+      :name: Tickspot::Entry#self.section
+    :complexity: 1
+    :name: Tickspot::Entry
+  - :lines: 4
+    :defs: 
+    - :lines: 2
+      :complexity: 1
+      :name: Tickspot::RecentTask#self.section
+    :complexity: 1
+    :name: Tickspot::RecentTask
+  - :lines: 4
+    :defs: 
+    - :lines: 2
+      :complexity: 1
+      :name: Tickspot::Task#self.section
+    :complexity: 1
+    :name: Tickspot::Task
+  - :lines: 12
+    :defs: 
+    - :lines: 10
+      :complexity: 1
+      :name: Tickspot::Request#self.post
+    :complexity: 1
+    :name: Tickspot::Request
+  - :lines: 4
+    :defs: 
+    - :lines: 2
+      :complexity: 1
+      :name: Tickspot::Client#self.section
+    :complexity: 1
+    :name: Tickspot::Client
+  - :lines: 4
+    :defs: 
+    - :lines: 2
+      :complexity: 1
+      :name: Tickspot::User#self.section
+    :complexity: 1
+    :name: Tickspot::User
+  - :lines: 4
+    :defs: 
+    - :lines: 2
+      :complexity: 1
+      :name: Tickspot::Project#self.section
+    :complexity: 1
+    :name: Tickspot::Project
+  - :lines: 2
+    :complexity: 0
+    :name: "Tickspot::"
+  - :lines: 20
+    :complexity: 0
+    :name: Tickspot
+  :files: 
+  - :classes: 
+    - :methods: []
+
+      :lines: 20
+      :complexity: 0
+      :class_name: Tickspot
+    - :methods: []
+
+      :lines: 2
+      :complexity: 0
+      :class_name: "Tickspot::"
+    - :methods: 
+      - :lines: 10
+        :complexity: 1
+        :name: Tickspot::Request#self.post
+      :lines: 12
+      :complexity: 1
+      :class_name: Tickspot::Request
+    - :methods: 
+      - :lines: 7
+        :complexity: 3
+        :name: Tickspot::Base#self.all
+      - :lines: 2
+        :complexity: 1
+        :name: Tickspot::Base#id
+      - :lines: 2
+        :complexity: 1
+        :name: Tickspot::Base#method_missing
+      - :lines: 2
+        :complexity: 1
+        :name: Tickspot::Base#initialize
+      :lines: 23
+      :complexity: 6
+      :class_name: Tickspot::Base
+    - :methods: 
+      - :lines: 2
+        :complexity: 1
+        :name: Tickspot::Client#self.section
+      :lines: 4
+      :complexity: 1
+      :class_name: Tickspot::Client
+    - :methods: 
+      - :lines: 2
+        :complexity: 1
+        :name: Tickspot::Project#self.section
+      :lines: 4
+      :complexity: 1
+      :class_name: Tickspot::Project
+    - :methods: 
+      - :lines: 2
+        :complexity: 1
+        :name: Tickspot::Task#self.section
+      :lines: 4
+      :complexity: 1
+      :class_name: Tickspot::Task
+    - :methods: 
+      - :lines: 2
+        :complexity: 1
+        :name: Tickspot::ClientProjectTask#self.section
+      :lines: 4
+      :complexity: 1
+      :class_name: Tickspot::ClientProjectTask
+    - :methods: 
+      - :lines: 2
+        :complexity: 1
+        :name: Tickspot::Entry#self.section
+      :lines: 4
+      :complexity: 1
+      :class_name: Tickspot::Entry
+    - :methods: 
+      - :lines: 2
+        :complexity: 1
+        :name: Tickspot::RecentTask#self.section
+      :lines: 4
+      :complexity: 1
+      :class_name: Tickspot::RecentTask
+    - :methods: 
+      - :lines: 2
+        :complexity: 1
+        :name: Tickspot::User#self.section
+      :lines: 4
+      :complexity: 1
+      :class_name: Tickspot::User
+    :filename: tickspot.rb
+:churn: 
+  :changes: []
+
+:flog: 
+  :average: 4.8
+  :pages: 
+  - :path: /lib/tickspot.rb
+    :highest_score: 12.1
+    :average_score: 4.8
+    :scanned_methods: 
+    - :name: Request#post
+      :score: 12.1
+      :operators: 
+      - :operator: assignment
+        :score: 2.6
+      - :operator: email
+        :score: 1.7
+      - :operator: password
+        :score: 1.7
+      - :operator: company
+        :score: 1.5
+      - :operator: merge
+        :score: 1.5
+      - :operator: to_s
+        :score: 1.5
+      - :operator: post
+        :score: 1.3
+      - :operator: "[]"
+        :score: 1.3
+      - :operator: delete
+        :score: 1.3
+    - :name: Base#all
+      :score: 9.5
+      :operators: 
+      - :operator: assignment
+        :score: 4.4
+      - :operator: branch
+        :score: 2.9
+      - :operator: section
+        :score: 1.8
+      - :operator: new
+        :score: 1.6
+      - :operator: merge
+        :score: 1.6
+      - :operator: map
+        :score: 1.5
+      - :operator: post
+        :score: 1.4
+    - :name: Tickspot#none
+      :score: 7.7
+      :operators: 
+      - :operator: sclass
+        :score: 6.0
+      - :operator: attr_accessor
+        :score: 1.7
+    - :name: Base#method_missing
+      :score: 3.0
+      :operators: 
+      - :operator: to_s
+        :score: 1.6
+      - :operator: "[]"
+        :score: 1.4
+    - :name: main#none
+      :score: 2.2
+      :operators: 
+      - :operator: require
+        :score: 2.2
+    - :name: Base#id
+      :score: 1.4
+      :operators: 
+      - :operator: "[]"
+        :score: 1.4
+    - :name: Base#initialize
+      :score: 1.4
+      :operators: 
+      - :operator: assignment
+        :score: 1.4
+    - :name: Base#none
+      :score: 1.3
+      :operators: 
+      - :operator: attr_reader
+        :score: 1.3
+    :score: 38.6
+  :total: 38.6
+:flay: 
+  :matches: []
+
+  :total_score: "0"
+:reek: 
+  :matches: 
+  - :code_smells: []
+
+    :file_path: lib/tickspot.rb
+:rcov: 
+  lib/tickspot.rb: 
+    :lines: 
+    - :content: "   require 'rubygems'"
+      :was_run: true
+    - :content: "   require 'httparty'"
+      :was_run: true
+    - :content: "   "
+      :was_run: true
+    - :content: "   module Tickspot"
+      :was_run: true
+    - :content: "     class << self"
+      :was_run: true
+    - :content: "       attr_accessor :company, :email, :password"
+      :was_run: true
+    - :content: "     end"
+      :was_run: true
+    - :content: "   "
+      :was_run: true
+    - :content: "     class Request"
+      :was_run: true
+    - :content: "       def self.post(options)"
+      :was_run: true
+    - :content: "         section = options.delete(:section)"
+      :was_run: true
+    - :content: "         result = HTTParty.post("
+      :was_run: true
+    - :content: "           \"https://#{Tickspot.company}.tickspot.com/api/#{section}\","
+      :was_run: true
+    - :content: "           :query => options.merge({"
+      :was_run: true
+    - :content: "             :email =>     Tickspot.email,"
+      :was_run: true
+    - :content: "             :password =>  Tickspot.password"
+      :was_run: true
+    - :content: "           })"
+      :was_run: true
+    - :content: "         )"
+      :was_run: true
+    - :content: "         result[section.to_s]"
+      :was_run: true
+    - :content: "       end"
+      :was_run: true
+    - :content: "     end"
+      :was_run: true
+    - :content: "   "
+      :was_run: true
+    - :content: "     class Base"
+      :was_run: true
+    - :content: "       attr_reader :attributes"
+      :was_run: true
+    - :content: "       "
+      :was_run: true
+    - :content: "       def initialize(data)"
+      :was_run: true
+    - :content: "         @attributes = data"
+      :was_run: true
+    - :content: "       end"
+      :was_run: true
+    - :content: "       "
+      :was_run: true
+    - :content: "       def method_missing(method_id, *args)"
+      :was_run: true
+    - :content: "         @attributes[method_id.to_s]"
+      :was_run: true
+    - :content: "       end"
+      :was_run: true
+    - :content: "       "
+      :was_run: true
+    - :content: "       def id"
+      :was_run: true
+    - :content: "         @attributes['id']"
+      :was_run: true
+    - :content: "       end"
+      :was_run: true
+    - :content: "       "
+      :was_run: true
+    - :content: "       def self.all(options = {})"
+      :was_run: true
+    - :content: "         result = Request.post("
+      :was_run: true
+    - :content: "           options.merge({"
+      :was_run: true
+    - :content: "             :section => section"
+      :was_run: true
+    - :content: "           })"
+      :was_run: true
+    - :content: "         )"
+      :was_run: true
+    - :content: "         result.map{|item| new(item)} if result"
+      :was_run: true
+    - :content: "       end"
+      :was_run: true
+    - :content: "     end"
+      :was_run: true
+    - :content: "   "
+      :was_run: true
+    - :content: "     class Client < Base"
+      :was_run: true
+    - :content: "       def self.section"
+      :was_run: true
+    - :content: "         :clients"
+      :was_run: true
+    - :content: "       end"
+      :was_run: true
+    - :content: "     end"
+      :was_run: true
+    - :content: "   "
+      :was_run: true
+    - :content: "     class Project < Base"
+      :was_run: true
+    - :content: "       def self.section"
+      :was_run: true
+    - :content: "         :projects"
+      :was_run: true
+    - :content: "       end"
+      :was_run: true
+    - :content: "     end"
+      :was_run: true
+    - :content: "   "
+      :was_run: true
+    - :content: "     class Task < Base"
+      :was_run: true
+    - :content: "       def self.section"
+      :was_run: true
+    - :content: "         :tasks"
+      :was_run: true
+    - :content: "       end"
+      :was_run: true
+    - :content: "     end"
+      :was_run: true
+    - :content: "   "
+      :was_run: true
+    - :content: "     class ClientProjectTask < Base"
+      :was_run: true
+    - :content: "       def self.section"
+      :was_run: true
+    - :content: "         :clients_projects_tasks"
+      :was_run: true
+    - :content: "       end"
+      :was_run: true
+    - :content: "     end"
+      :was_run: true
+    - :content: "   "
+      :was_run: true
+    - :content: "     class Entry < Base"
+      :was_run: true
+    - :content: "       def self.section"
+      :was_run: true
+    - :content: "         :entries"
+      :was_run: true
+    - :content: "       end"
+      :was_run: true
+    - :content: "     end"
+      :was_run: true
+    - :content: "   "
+      :was_run: true
+    - :content: "     class RecentTask < Base"
+      :was_run: true
+    - :content: "       def self.section"
+      :was_run: true
+    - :content: "         :recent_tasks"
+      :was_run: true
+    - :content: "       end"
+      :was_run: true
+    - :content: "     end"
+      :was_run: true
+    - :content: "   "
+      :was_run: true
+    - :content: "     class User < Base"
+      :was_run: true
+    - :content: "       def self.section"
+      :was_run: true
+    - :content: "         :users"
+      :was_run: true
+    - :content: "       end"
+      :was_run: true
+    - :content: "     end"
+      :was_run: true
+    - :content: "   end"
+      :was_run: true
+    :percent_run: 100
+  :global_percent_run: 100.0
+:roodi: 
+  :problems: []
+
+  :total: 
+  - Found 0 errors.

@@ -1,0 +1,97 @@
+...................
+
+Finished in 0.042419 seconds
+
+19 examples, 0 failures
+================================================================================
+lib/tickspot.rb
+================================================================================
+   require 'rubygems'
+   require 'httparty'
+   
+   module Tickspot
+     class << self
+       attr_accessor :company, :email, :password
+     end
+   
+     class Request
+       def self.post(options)
+         section = options.delete(:section)
+         result = HTTParty.post(
+           "https://#{Tickspot.company}.tickspot.com/api/#{section}",
+           :query => options.merge({
+             :email =>     Tickspot.email,
+             :password =>  Tickspot.password
+           })
+         )
+         result[section.to_s]
+       end
+     end
+   
+     class Base
+       attr_reader :attributes
+       
+       def initialize(data)
+         @attributes = data
+       end
+       
+       def method_missing(method_id, *args)
+         @attributes[method_id.to_s]
+       end
+       
+       def id
+         @attributes['id']
+       end
+       
+       def self.all(options = {})
+         result = Request.post(
+           options.merge({
+             :section => section
+           })
+         )
+         result.map{|item| new(item)} if result
+       end
+     end
+   
+     class Client < Base
+       def self.section
+         :clients
+       end
+     end
+   
+     class Project < Base
+       def self.section
+         :projects
+       end
+     end
+   
+     class Task < Base
+       def self.section
+         :tasks
+       end
+     end
+   
+     class ClientProjectTask < Base
+       def self.section
+         :clients_projects_tasks
+       end
+     end
+   
+     class Entry < Base
+       def self.section
+         :entries
+       end
+     end
+   
+     class RecentTask < Base
+       def self.section
+         :recent_tasks
+       end
+     end
+   
+     class User < Base
+       def self.section
+         :users
+       end
+     end
+   end
